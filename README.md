@@ -1,15 +1,18 @@
-## Flash FT4232H EEPROM:
+## Flash FT4232H EEPROM
 
-Setting emviroment:
+### Setting emviroment
+
+setting on jetson
 ``` sudo bash jetson_setting_lib.sh ```  
-
-Unload Serial USB Drivers
-```sudo modprobe -r ftdi_sio ```
+setting on linux x64
+``` sudo bash x64_setting_lib.sh ```
 
 compile code (in the firmware directory):
 ``` bash compile.sh ```
 
 execute code:  
+Unload Serial USB Drivers
+```sudo modprobe -r ftdi_sio ```
 write EEPROM ```sudo ./write```
 
 read EEPROM data ```sudo ./read```
