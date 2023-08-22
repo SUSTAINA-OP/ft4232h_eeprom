@@ -4,18 +4,22 @@
 
 setting on jetson
 ``` sudo bash jetson_setting_lib.sh ```  
+
 setting on linux x64
 ``` sudo bash x64_setting_lib.sh ```
 
-compile code (in the firmware directory):
+compile code
 ``` bash compile.sh ```
 
-execute code:  
-Unload Serial USB Drivers
-```sudo modprobe -r ftdi_sio ```
-write EEPROM ```sudo ./write```
 
-read EEPROM data ```sudo ./read```
+### How to execute code
 
-after write eeprom, reload Drivers:
+First unload Serial USB Drivers
+```sudo modprobe -r ftdi_sio ``` 
+
+Writing EEPROM ```sudo ./write```
+
+Reading setting from EEPROM  ```sudo ./read```
+
+After write eeprom, reload Drivers:
 ```sudo modprobe ftdi_sio```
